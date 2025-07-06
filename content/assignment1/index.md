@@ -6,6 +6,8 @@ extra.main_nav = true
 extra.sub_nav = false
 +++
 
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 {% title_block(title="Assignment 1: Multi-Armed Bandit Portfolio" bg="white") %}
 placeholder 
 {% end %}
@@ -36,8 +38,10 @@ The code for this project contains the following files, which are available as a
 
 <br><br>
 **Files to Edit and Submit:**  
-You will collect data adaptively and generate tables and figures during the assignment. You should submit these files with your code and comments. Please send tables and figures in a single pdf or html, e.g., `data.csv`, `assignment_1_solutions.pdf`.  
+You will collect data adaptively and generate tables and figures during the assignment. You should submit these files with your code and comments. Please send tables and figures in a single pdf or html, e.g., `data.csv`, `assignment_1_solutions.pdf`. 
+
 *Please do not change the other files in this distribution or submit any of our original files other than these files.*
+<br>
 
 **Commenting:**  
 In this assignment we ask you to provide extensive commenting on the exhibits (data, tables, and figures, code) you generate. For each exhibit that you implement, provide  
@@ -53,6 +57,7 @@ EITHER use Stata (easier) OR Python (harder). We will use Python later, so to ge
 You are not alone! If you find yourself stuck on something, let us know. We want this project to be rewarding and instructional, not frustrating and demoralizing. But we don't know when or how to help unless you ask.
 
 <br><br>
+
 ## MAB Portfolios
 To get started, collect data on Exchange-Traded Funds (ETFs). ETFs are pooled investment vehicles that trade on stock exchanges much like individual equities. They typically aim to track the performance of a specific index, sector, commodity, or asset class by holding a basket of underlying securities. Build a portfolio of five ETFs with the goal of maximizing total expected profits using Multi-Armed Bandit algorithms. Below are five ETFs across various categories:
 
@@ -73,20 +78,26 @@ You can get daily close prices (adjusted for splits, dividends and distributions
 In each of five trading days, make 200 stock purchases in such a way that your return is maximized. Use the Multi-Armed Bandit algorithm to determine on each of the five days what share of the 200 purchases to allocate to each of the five ETFs. To do this:
 
 1. Set up an initial dataset that specifies a unique identifier for each purchase. Assign the first 200 purchases to batch 1, the second 200 to batch 2, and so on up to batch 5. With an id for 1000 observations, you can use:  
-   ```stata
+
+   ```
    bbandit_initialize , batch(5) arms(5) exploration_phase(0)
+   ```
+
 <br>
+
 Giving all ETFs the same chance, set the shares for each arm uniformly in the first batch. That is, set chosen_arm = 1 for the first 40 observations of batch 1, chosen_arm = 2 for the next 40 observations, etc.
 
 Because we haven’t observed any rewards yet, the rewards are missing. Use the daily return of the adjusted close prices (corrected for splits, dividends, and distributions) as the success measure. Compute the daily return for day t as:
 
-\[
-  \text{return}_t = \frac{\text{Close}_{t} - \text{Close}_{t-1}}{\text{Close}_{t-1}}.
-\]
+$$
+\text{return\_t} = \frac{\text{Close\_t} - \text{Close\_{t-1}}}{\text{Close\_{t-1}}}
+$$
+
 On each day, you need to use the previous day’s closing price to compute the return. At the end of each trading day, record the reward for each purchase and update the allocation using:
 
-bbandit_update reward chosen_arm batch, greedy eps(0.5)
-Use epsilon = 1/2 for batch 2, 1/3 for batch 3, 1/4 for batch 4, and 1/5 for batch 5. Comment on better ways to decay epsilon (e.g., polynomial vs. exponential schedules).
+```bbandit_update reward chosen_arm batch, greedy eps(0.5)```
+<br>
+Use ```epsilon = 1/2``` for batch 2, ```1/3``` for batch 3, ```1/4``` for batch 4, and ```1/5``` for batch 5. Comment on better ways to decay epsilon (e.g., polynomial vs. exponential schedules).
 
 The data could look like this:
 
@@ -124,9 +135,9 @@ Grading: We will check the shares.
 
 * Compute the cumulative empirical regret of the Multi-Armed Bandit portfolio relative to both the fixed allocation and the ex-post optimal arm over the five-day period. That is:
 
-\[
-  \mathrm{Regret}_T = \sum_{t=1}^{T} \bigl(\mathrm{Reward}_{\mathrm{optimal},t} - \mathrm{Reward}_{\mathrm{MAB},t}\bigr)
-\]
+$$
+\text{Regret\_T} \;=\; \sum_{t=1}^{T} \bigl(\text{Reward\_optimal,t} - \text{Reward\_MAB,t}\bigr)
+$$
 
 
 where Rewardₒₚₜ,ₜ is the reward obtained by the best arm in hindsight on day t and Rewardₘₐᵦ,ₜ is the reward obtained by your MAB portfolio on day t.
@@ -140,13 +151,13 @@ where Rewardₒₚₜ,ₜ is the reward obtained by the best arm in hindsight on
 
 Convert continuous daily returns into binary rewards by defining:
 
-\[
+$$
   R_t =
     \begin{cases}
       1, & \text{if daily return}_t \ge 0,\\
       0, & \text{otherwise.}
     \end{cases}
-\]
+$$
 
 Using these binary rewards for the same five-day period, run a Thompson Sampling experiment with the same batches and batch sizes.
 Note: Make sure to blind the rewards already obtained with epsilon-greedy.
@@ -162,8 +173,7 @@ Compare the resulting portfolio allocations to those from epsilon-greedy. Discus
 
 Simulate 20 batches of 1 purchase each (batch(20), size(1)) with Thompson Sampling using true success probabilities of p₁=0.35 and p₂=0.60, no clipping, and plot_thompson and stacked options:
 
-bbandit_sim 0.35 0.60 0.40, size(1) batch(20) clipping(0) thompson plot_thompson stacked
-Plot:
+```bbandit_sim 0.35 0.60 0.40, size(1) batch(20) clipping(0) thompson plot_thompson stacked``` Plot:
 
 The posterior Beta distributions for batch 1 and 20 for each arm.
 
@@ -171,7 +181,10 @@ Comment on what the flat Beta distributions in batch 1 mean and how quickly the 
 
 Hint: The variance of the Beta distribution is:
 
+$$
 \mathrm{Var}[\mathrm{Beta}(\alpha,\beta)] = \frac{\alpha\,\beta}{(\alpha + \beta)^2(\alpha + \beta + 1)}.
+$$
+
 The figures could look like this:
 
 <p style="text-align:center;"><img src="ts1.png" alt="ts1" style="width:400px; height:auto;" /><img src="ts20.png" alt="ts20" style="width:400px; height:auto;" /></p>
@@ -188,21 +201,21 @@ Repeat the above simulation under different settings:
 Clipping rates c=0.05 and c=0.45:
 
 
-bbandit_sim 0.35 0.6, size(20) batch(20) clipping(0.45) thompson 
-bbandits reward chosen_arm batch
+```bbandit_sim 0.35 0.6, size(20) batch(20) clipping(0.45) thompson```
+```bbandits reward chosen_arm batch```
 
-bbandit_sim 0.35 0.6, size(20) batch(20) clipping(0.05) thompson 
-bbandits reward chosen_arm batch
+```bbandit_sim 0.35 0.6, size(20) batch(20) clipping(0.05) thompson ```
+```bbandits reward chosen_arm batch```
 Batch sizes 20 and 100 (with clipping 0.05):
 
-bbandit_sim 0.35 0.60, size(20) batch(20) clipping(0.05) thompson  
-bbandits reward chosen_arm batch  
-bbandit_sim 0.35 0.60, size(100) batch(20) clipping(0.05) thompson  
-bbandits reward chosen_arm batch
+```bbandit_sim 0.35 0.60, size(20) batch(20) clipping(0.05) thompson  ```
+```bbandits reward chosen_arm batch  ```
+```bbandit_sim 0.35 0.60, size(100) batch(20) clipping(0.05) thompson ``` 
+```bbandits reward chosen_arm batch```
 Increase the number of batches to 40 (with size 100 and clipping 0.05):
 
-bbandit_sim 0.35 0.60, size(100) batch(40) clipping(0.05) thompson  
-bbandits reward chosen_arm batch
+```bbandit_sim 0.35 0.60, size(100) batch(40) clipping(0.05) thompson  ```
+```bbandits reward chosen_arm batch```
 How do the results differ in terms of:
 
 Convergence speed to the best arm?
@@ -224,11 +237,14 @@ Using a sliding window on recent rewards to update Beta parameters.
 
 Applying a discount factor γ to old observations:
 
+$$
 (α_k, β_k) = (γ α_k, γ β_k) +
   \begin{cases}
     (R_t, 1 − R_t), & \text{if chosen arm} = k,\\
     (0, 0), & \text{otherwise.}
   \end{cases}
+$$
+
 Resetting priors after a fixed number of batches.
 
 Implement one of these approaches and demonstrate how the algorithm adapts when arm 1 becomes better after batch 10. Plot the posterior distributions and selection frequencies before and after the change.
