@@ -6,6 +6,8 @@ extra.main_nav = true
 extra.sub_nav = false
 +++
 
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 {% title_block(title="Assignment 2: Value Iteration and Q-Learning" bg="white") %}
 placeholder 
 {% end %}
@@ -153,8 +155,10 @@ though you can change this with the living reward option (`-r`).
 <br>
 
 Recall the value iteration state update equation:
-> \
->   V_{k+1}(s) = \max_a \sum_{s'} T(s,a,s')[R(s,a,s') + γ V_k(s')]\
+
+$$
+V_{k+1}(s) = \max_{a}\sum_{s'} T(s,a,s')\bigl[R(s,a,s') + \gamma\,V_k(s')\bigr].
+$$
 
 Write a value iteration agent in `ValueIterationAgent`, partially specified in `valueIterationAgents.py`. This agent is an offline planner. The relevant training option is the number of iterations (`-i`) in its initial planning phase. The constructor runs value iteration for that many iterations before returning.
 
@@ -218,6 +222,7 @@ Your agent will be graded on a new grid. We will check values, Q-values, and pol
 ```bash
 python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.2
 ```
+<br>
 <p style="text-align: center;"><img decoding="async" src="value-q2.jpg" alt="value-iteration-values"></p>
 
 <br>
@@ -458,15 +463,21 @@ Implement an approximate Q-learning agent that learns weights for features of st
 
 The approximate Q-function is:
 
-> \[ Q(s,a) = \sum_{i=1}^n f_i(s,a) \; w_i \]
+$$
+\[ Q(s,a) = \sum_{i=1}^n f_i(s,a) \; w_i \]
+$$
 
 where each weight `w_i` corresponds to feature `f_i`. Implement the weight vector as a dictionary mapping features to weight values. Update weights as in Q-learning:
 
-> \[ w_i \leftarrow w_i + \alpha \cdot \text{difference} \cdot f_i(s,a) \]
->
-> where
->
-> \[ \text{difference} = \bigl(r + \gamma \max_{a'} Q(s',a')\bigr) - Q(s,a). \]
+$$
+\[ w_i \leftarrow w_i + \alpha \cdot \text{difference} \cdot f_i(s,a) \]
+$$
+
+where
+
+$$
+\[ \text{difference} = \bigl(r + \gamma \max_{a'} Q(s',a')\bigr) - Q(s,a). \]
+$$
 
 <br>
 
