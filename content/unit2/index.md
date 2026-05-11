@@ -19,7 +19,6 @@ placeholder
     <!-- Full report section -->
     <div style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
       <a class="text" style="text-decoration: none;">
-        <strong>Deadline:</strong> July 07, 2025<br><br>
         <strong>Assignment 1: Multi-Armed Bandit Portfolio</strong><br>
         Investors seek reward.<br>
         How much should they put in which stock?<br>
