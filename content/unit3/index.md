@@ -13,7 +13,7 @@ placeholder
 {{ anchor(title="Meeting Information")}}
 {% block_1c_nopad(title="Meeting" bg="grey" class="mt-0") %}
 
-**July 08, 2025, 4:30pm – 5:30pm CEST***
+**June 30, 2026, 4:30pm – 5:30pm CEST***
 
 Please find the information on how to join the zoom meeting in the corresponding e-mail.
 

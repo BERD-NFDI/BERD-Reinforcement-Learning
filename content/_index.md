@@ -49,10 +49,10 @@ Interactive Online Session (~60 min).
 ## Weekly Meetings
 The course includes 4 live Online Meetings, in which you will discuss the week’s contents with the instructor and fellow participants: 
 
-- Meeting 1: JUN 17, 2025, 4:30pm – 5:30pm CEST 
-- Meeting 2: JUN 24, 2025, 4:30pm – 5:30pm CEST
-- Meeting 3: JUL 08, 2025, 4:30pm – 5:30pm CEST
-- Meeting 4: JUL 15, 2025, 4:30pm – 5:30pm CEST
+- Meeting 1: JUN 09, 2026, 4:30pm – 5:30pm CEST 
+- Meeting 2: JUN 16, 2026, 4:30pm – 5:30pm CEST
+- Meeting 3: JUN 30, 2026, 4:30pm – 5:30pm CEST
+- Meeting 4: JUL 07, 2026, 4:30pm – 5:30pm CEST
 
 <br> <br> <br>
 ## Prerequisites
