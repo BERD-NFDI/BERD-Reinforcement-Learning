@@ -21,6 +21,33 @@ Please find the information on how to join the zoom meeting in the corresponding
 
 {% end %}
 
+{{ anchor(title="Course Videos")}}
+{% block_1c_nopad(title= "Course Videos" bg="grey" class="mt-0") %}
+
+## Introduction to Reinforced Learning
+<iframe width="560" height="315" src="https://www.youtube.com/embed/68tVOESzcWM" title="Introduction to reinforced learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br><br>
+
+## Unit 1-1: Multi-armed bandits
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5V_qKCzS9Ps" title="Unit 1-1: Multi-armed bandits" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br><br>
+
+## Unit 1-2: Greedy, e-greedy, decayed, e-greedy
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EvSTdV4oF6k" title="Unit 1-2: Greedy, e-greedy, decayed, e-greedy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br><br>
+
+## Unit 1-3: Upper Confidence Bound
+<iframe width="560" height="315" src="https://www.youtube.com/embed/86B6XDMlSHY" title="Unit 1-3: Upper Confidence Bound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br><br>
+
+## Unit 1-4: Thompson Sampling
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lwWRwDAb40I" title="Unit 1-4: Thompson Sampling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br><br>
+
+## Unit 1-5: Inference with Batched Bandits
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dY6aNFg6SqU" title="Unit 1-5: Inference with Batched Bandits" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% end %}
+
 {{ anchor(title="Slides and Readings")}}
 {% block_1c_nopad(title="Slides and Readings" bg="white" class="mb-0") %}
 <div class="w-full text-left" style="display: flex;">
@@ -149,32 +176,4 @@ Please find the information on how to join the zoom meeting in the corresponding
         <br>
     </div>
 </div>
-{% end %}
-
-
-{{ anchor(title="Course Videos")}}
-{% block_1c_nopad(title= "Course Videos" bg="grey" class="mt-0") %}
-
-## Introduction to Reinforced Learning
-<iframe width="560" height="315" src="https://www.youtube.com/embed/68tVOESzcWM" title="Introduction to reinforced learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br><br>
-
-## Unit 1-1: Multi-armed bandits
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5V_qKCzS9Ps" title="Unit 1-1: Multi-armed bandits" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br><br>
-
-## Unit 1-2: Greedy, e-greedy, decayed, e-greedy
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EvSTdV4oF6k" title="Unit 1-2: Greedy, e-greedy, decayed, e-greedy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br><br>
-
-## Unit 1-3: Upper Confidence Bound
-<iframe width="560" height="315" src="https://www.youtube.com/embed/86B6XDMlSHY" title="Unit 1-3: Upper Confidence Bound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br><br>
-
-## Unit 1-4: Thompson Sampling
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lwWRwDAb40I" title="Unit 1-4: Thompson Sampling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br><br>
-
-## Unit 1-5: Inference with Batched Bandits
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dY6aNFg6SqU" title="Unit 1-5: Inference with Batched Bandits" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {% end %}

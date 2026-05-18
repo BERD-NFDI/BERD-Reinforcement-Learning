@@ -44,6 +44,8 @@ Interactive Online Session (~60 min).
 
 - **Week 4:** Deep Learning. Watch video lectures about how neural networks work and how to apply them to learning problems (~60 min).
 Interactive Online Session (~60 min).
+
+<br>&#129489;&#8205;&#128187;After Unit 2 and Unit 4, you are tasked with practical assignments to apply the course’s contents.
 <br> <br> <br>
 
 ## Weekly Meetings

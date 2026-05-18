@@ -19,6 +19,7 @@ placeholder
     <!-- Full report section -->
     <div style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
       <a class="text" style="text-decoration: none;">
+        <strong>Deadline: June 23, 2026</strong><br> <br>
         <strong>Assignment 1: Multi-Armed Bandit Portfolio</strong><br>
         Investors seek reward.<br>
         How much should they put in which stock?<br>
@@ -56,6 +57,29 @@ Please find the information on how to join the zoom meeting in the corresponding
 *Note the timezone if you are joining from outside of Germany.
  <br><br>
 
+{% end %}
+
+{{ anchor(title="Course Videos")}}
+{% block_1c_nopad(title= "Course Videos" bg="white" class="mt-0") %}
+
+**Unit 2-1: Markov Processes**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oudfBduKaKg" title="Unit 2-1: Markov Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 2-2: Markov Decision Processes**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t8HBxVofJ_M" title="Unit 2-2: Markov Decision Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 2-3: Intro to Value Iteration with Bellman Equation**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/51504SRFaXg" title="Unit 2-3: Intro to Value Iteration with Bellman Equation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 2-4: Value Iteration Technicalities**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Vf8yyBj5Jw" title="Unit 2-4: Value Iteration Technicalities" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 2-5: Policy Iteration**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p25u5OIhuAM" title="Unit 2-5: Policy Iteration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {% end %}
 
 {{ anchor(title="Slides and Readings")}}
@@ -222,27 +246,4 @@ Please find the information on how to join the zoom meeting in the corresponding
         <br>
     </div>
 </div>
-{% end %}
-
-{{ anchor(title="Course Videos")}}
-{% block_1c_nopad(title= "Course Videos" bg="white" class="mt-0") %}
-
-**Unit 2-1: Markov Processes**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oudfBduKaKg" title="Unit 2-1: Markov Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 2-2: Markov Decision Processes**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t8HBxVofJ_M" title="Unit 2-2: Markov Decision Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 2-3: Intro to Value Iteration with Bellman Equation**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/51504SRFaXg" title="Unit 2-3: Intro to Value Iteration with Bellman Equation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 2-4: Value Iteration Technicalities**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1Vf8yyBj5Jw" title="Unit 2-4: Value Iteration Technicalities" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 2-5: Policy Iteration**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p25u5OIhuAM" title="Unit 2-5: Policy Iteration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {% end %}

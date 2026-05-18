@@ -10,6 +10,34 @@ extra.sub_nav =["Meeting Information", "Readings", "Course Videos"]
 placeholder
 {% end %}
 
+{{ anchor(title="Assignment 2")}}
+{% block_1c_nopad(title="Assignment 2" bg="white" class="mb-0") %}
+
+<div class="w-full text-left" style="display: flex;">
+    <!-- Left vertical line -->
+    <div style="border-left: 2.5px solid #808285; padding-left: 16px;  margin-top: 10px">
+        <!-- Full report section -->
+        <div style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
+            <a class="text font-bold" style="text-decoration: none;">
+                Deadline: July 14, 2026 <br><br>
+                Please find the Assignment 2 here:
+            </a>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
+            <span style="margin-right: 16px;">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 9.52655H11.2609V2.76181H4.43671V0H14V9.52655Z" fill="#071A2D"/>
+                    <path d="M11.5818 0.368914L-0.000976562 12.0476L1.93586 14.0005L13.5186 2.32179L11.5818 0.368914Z" fill="#071A2D"/>
+                </svg>
+            </span>
+            <a href="https://github.com/BERD-NFDI/BERD-Reinforcement-Learning/tree/main/content/unit4/assignment_2" download class="text-blue-500">
+                Assignment Unit 4
+            </a>
+        </div>
+    </div>
+</div>
+{% end %}
+
 {{ anchor(title="Meeting Information")}}
 {% block_1c_nopad(title="Meeting" bg="grey" class="mt-0") %}
 
@@ -20,7 +48,30 @@ Please find the information on how to join the zoom meeting in the corresponding
 *Note the timezone if you are joining from outside of Germany.
 {% end %}
 
-{{ anchor(title="Readings")}}
+{{ anchor(title="Course Videos")}}
+{% block_1c_nopad(title= "Course Videos" bg="grey" class="mt-0") %}
+
+**Unit 4-1: Neural Networks**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8P6L59nnHTQ" title="Unit 2-1: Markov Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 4-2: Deep Neural Networks**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l5Of3JRl5uw" title="Unit 2-2: Markov Decision Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 4-3: Deep Q-Learning**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H6JkxYnGVpk" title="Unit 2-3: Intro to Value Iteration with Bellman Equation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 4-4: Policy Gradient Methods**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uj385x9VEKY" title="Unit 2-4: Value Iteration Technicalities" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+**Unit 4-5: Actor Critic Analytics**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/riEsbHvmOY8" title="Unit 2-3: Intro to Value Iteration with Bellman Equation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% end %}
+
+{{ anchor(title="Slides and Readings")}}
 {% block_1c_nopad(title="Slides and Readings" bg="white" class="mb-0") %}
 <div class="w-full text-left" style="display: flex;">
     <!-- Left vertical line -->
@@ -179,56 +230,6 @@ Please find the information on how to join the zoom meeting in the corresponding
         Sigaud, O., and O. Buffet (2013): Markov decision processes in artificial intelligence. John Wiley & Sons.
         </span>
         <br><br>
-        </div>
-    </div>
-</div>
-{% end %}
-
-{{ anchor(title="Course Videos")}}
-{% block_1c_nopad(title= "Course Videos" bg="grey" class="mt-0") %}
-
-**Unit 4-1: Neural Networks**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8P6L59nnHTQ" title="Unit 2-1: Markov Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 4-2: Deep Neural Networks**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l5Of3JRl5uw" title="Unit 2-2: Markov Decision Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 4-3: Deep Q-Learning**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H6JkxYnGVpk" title="Unit 2-3: Intro to Value Iteration with Bellman Equation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 4-4: Policy Gradient Methods**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uj385x9VEKY" title="Unit 2-4: Value Iteration Technicalities" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br><br>
-
-**Unit 4-5: Actor Critic Analytics**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/riEsbHvmOY8" title="Unit 2-3: Intro to Value Iteration with Bellman Equation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-{% end %}
-
-{{ anchor(title="Assignments")}}
-{% block_1c_nopad(title="Assignments" bg="white" class="mb-0") %}
-
-<div class="w-full text-left" style="display: flex;">
-    <!-- Left vertical line -->
-    <div style="border-left: 2.5px solid #808285; padding-left: 16px;  margin-top: 10px">
-        <!-- Full report section -->
-        <div style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
-            <a class="text font-bold" style="text-decoration: none;">
-                Please find the assignment for unit 4 here:
-            </a>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
-            <span style="margin-right: 16px;">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 9.52655H11.2609V2.76181H4.43671V0H14V9.52655Z" fill="#071A2D"/>
-                    <path d="M11.5818 0.368914L-0.000976562 12.0476L1.93586 14.0005L13.5186 2.32179L11.5818 0.368914Z" fill="#071A2D"/>
-                </svg>
-            </span>
-            <a href="https://github.com/BERD-NFDI/BERD-Reinforcement-Learning/tree/main/content/unit4/assignment_2" download class="text-blue-500">
-                Assignment Unit 4
-            </a>
         </div>
     </div>
 </div>

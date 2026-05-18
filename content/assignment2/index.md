@@ -15,6 +15,10 @@ placeholder
 {{ anchor(title="Assignment Details")}}
 {% block_1c_nopad(title="Assignment Details" bg="white" class="mb-0") %}
 
+<br>
+
+**Deadline: July 14, 2026**
+
 ## Introduction
 - In this project, you will implement value iteration and Q-learning. You will test your agents first on `GridWorld` (from lecture), then apply them to a simulated robot controller (Crawler) and Pacman.
 - The code for this project contains the following files, which are available as a <a href="https://github.com/BERD-NFDI/BERD-Reinforcement-Learning/blob/main/content/unit4/assignment_2/assignment_2.zip">zip archive</a>.

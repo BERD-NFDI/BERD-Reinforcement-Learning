@@ -15,6 +15,10 @@ placeholder
 {{ anchor(title="Assignment Details")}}
 {% block_1c_nopad(title="Assignment Details" bg="white" class="mb-0") %}
 
+<br>
+
+**Deadline: June 23, 2026**
+
 ## Introduction
 In this project, you will implement Multi-Armed Bandit algorithms. You will use first *epsilon-greedy* (from lecture) to build a portfolio of stocks adaptively at a daily frequency. Then, you will use *Thompson Sampling* (from lecture) to compare the performance and some properties of the algorithms.
 
