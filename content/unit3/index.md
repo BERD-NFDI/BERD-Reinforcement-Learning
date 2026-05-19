@@ -3,7 +3,7 @@ title="Unit 3"
 weight=50
 extra.footer_nav=true
 extra.main_nav = true
-extra.sub_nav =["Meeting Information", "Slides and Readings", "Course Videos"]
+extra.sub_nav =["Meeting Information", "Course Videos", "Slides and Readings"]
 +++
 
 {% title_block(title="Learning in the state-action-space (Unit 3)" bg="white") %}

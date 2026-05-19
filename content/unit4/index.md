@@ -3,7 +3,7 @@ title="Unit 4"
 weight=60
 extra.footer_nav=true
 extra.main_nav = true
-extra.sub_nav =["Meeting Information", "Readings", "Course Videos"]
+extra.sub_nav =["Meeting Information", "Course Videos", "Slides and Readings"]
 +++
 
 {% title_block(title="Deep Learning (Unit 4)" bg="white") %}

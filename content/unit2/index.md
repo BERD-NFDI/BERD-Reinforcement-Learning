@@ -3,7 +3,7 @@ title="Unit 2"
 weight=2
 extra.footer_nav=true
 extra.main_nav = true
-extra.sub_nav =["Meeting Information", "Slides and Readings", "Course Videos"]
+extra.sub_nav =["Meeting Information", "Course Videos", "Slides and Readings"]
 +++
 
 {% title_block(title="Solution methods for dynamic programming (Unit 2)" bg="white") %}
